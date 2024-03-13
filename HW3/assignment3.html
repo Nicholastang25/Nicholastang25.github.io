@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!---->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Companion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <style>
+    .feature-icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 0.75rem;
+    }
+
+    .ql{
+      font-weight: bold;
+    }
+
+    .ql2{
+      list-style: none;
+    }
+
+    .carousel-item{
+      height:32rem;
+      background: #777;
+      color: white;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      
+    }
+
+    .container{
+      
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: 50px;
+    }
+
+    .overlay-image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top:0;
+        background-position: center;
+        background-size: cover;
+        
+        filter: brightness(65%)
+    }
+
+    .button-color{
+      color:black;
+      background-image: linear-gradient(to right,#fce3e3,#e3fcfc);
+    }
+
+    .carousel-control-next,
+  .carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+    .team-member{
+      max-width: 100%;
+    height: 150px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    }
+    .spacing{
+      padding-top: 5px;
+      padding-bottom: 25px;
+    }
+  </style>
+</head>
+
+
+<!-- The navbar at the top -->
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a>Career Companion</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Resume Maker</a></li>
+              <li><a class="dropdown-item" href="#">Job Finding</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Interview Prep</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Job Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Carousel-->
+ <div id="myCarousel" class="carousel slide pointer-event" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    </div>
+    <div class="carousel-inner" >
+      <div class="carousel-item active" data-bs-interval ="5000">
+        <div class = "overlay-image" style ="background-image: url(./Images/ResumeMaking.jpg);"></div>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 style="color:white">Career Companion</h1>
+            <p style="color:white">Stand Out with Your Resume.</p>
+            <p  ><a class="btn btn-lg btn-primary; button-color" href="#"  >Start Now!</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval ="3000">
+        <div class = "overlay-image" style ="background-image: url(./Images/JobFinding.jpg);"></div>
+
+        <div class="container">
+          <div class="carousel-caption" style >
+            <h1 style="color:white">Job Finding</h1>
+            <p style="color:white">Find Jobs That Fit You.</p>
+            <p  ><a class="btn btn-lg btn-primary; button-color" href="#"  >Learn More</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval ="3000">
+        <div class = "overlay-image" style ="background-image: url(./Images/InterviewPrep.jpg);"></div>
+
+        <div class="container" >
+          <div class="carousel-caption text-end">
+            <h1 style="color:white">Interview Prep</h1>
+            <p style="color:white">Prepare for Success</p>
+            <p  ><a class="btn btn-lg btn-primary; button-color" href="#"  >Learn More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+  
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Our Mission</h2>
+        <p class="lead">
+          As seniors, we face the pivotal decision of pursuing higher education, taking a break, or launching our careers 
+            through internships or jobs. Our goal is to effortlessly discover relevant job opportunities that align with our 
+            experiences and interests. We aim to design and develop a web application that simplifies the resume creation process, 
+            streamlines job searches, and offers user-friendly interview preparation. Our solution is designed to save users time 
+            and ensure that they present their best selves to potential employers. 
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src = "./Images/OurMission.jpg" class="d-block w-100"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <!-- /END THE FEATURETTES -->
+
+
+  
+    <div class="col-md-7; spacing">
+      <h1 class="featurette-heading fw-normal lh-1">Our Team </h1>
+    </div>
+    <div class="row">
+      
+      <div class="col-lg-4">
+        <img src = "./Images/default.jpg" class="d-block w-100; team-member" />
+        <h2 class="fw-normal">Jonathan Shnayder</h2>
+        <p>Is our expert in the backend development, with a strong understanding of database management.</p>
+        <p><a class="btn btn-secondary" href="#">Contact »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src = "./Images/default.jpg" class="d-block w-100; team-member" />
+        <h2 class="fw-normal">Yzer De Gula</h2>
+        <p>Is our integration specialist, helping connect the front and backend development, ensuring functionality</p>
+        <p><a class="btn btn-secondary" href="#">Contact »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src = "./Images/default.jpg" class="d-block w-100; team-member" />
+        <h2 class="fw-normal">Nicholas Tang</h2>
+        <p>Our aspiring frontend developer, who is passionate in honing their skills and learning about web development</p>
+        <p><a class="btn btn-secondary" href="#">Contact »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+  </div>
+
+
+  
+
+
+  <!-- footer part-->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Career Companion</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Resume Making</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Job Finding</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Interview Prep</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+ <!-- **Conclusion:** ADDITIONAL TEXT TO MAYBE INCLUDE <p>PT partners with leading manufacturers and suppliers in the industry to ensure access to top-quality products and cutting-edge technology. These strategic partnerships enable PT to offer competitive pricing, expedited delivery, and exclusive deals to their customers.</p>
+With a vast inventory of top-quality equipment, a customer-centric approach, and a commitment to excellence, Industrial Equipment Solutions Inc. is the preferred choice for businesses seeking reliable industrial solutions. Whether it's fulfilling large-scale orders or assisting with specialized requirements, PT is dedicated to helping their customers succeed in their respective industries.-->
