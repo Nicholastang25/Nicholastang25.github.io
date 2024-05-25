@@ -1,0 +1,29 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Random Facts</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Facts</h1>
+        <form action="/api/fact/random" method="get">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+            <label for="subcategory">Subcategory:</label>
+            <input type="text" id="subcategory" name="subcategory">
+            <button type="submit">Get Fact</button>
+        </form>
+        <% if (error) { %>
+            <p><%= error %></p>
+        <% } else if (data) { %>
+            <p><%= data %></p>
+        <% } else { %>
+            <p>Enter a category and/or subcategory to get a random fact.</p>
+        <% } %>
+    </div>
+</body>
+</html>
